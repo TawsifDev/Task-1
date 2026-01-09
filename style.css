@@ -4,367 +4,316 @@
   box-sizing: border-box;
 }
 
+/* ---------- GLOBAL ---------- */
+body {
+  font-family: Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- HEADER ---------- */
 header {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 20px;
   display: flex;
-  gap: 346px;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
 
-
+nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .menu {
   display: flex;
   gap: 24px;
-  list-style-type: none;
-  padding: 44px 0 34px 0;
-
-
+  list-style: none;
 }
 
 .menu a {
   text-decoration: none;
+  color: #000;
+  font-weight: 500;
 }
 
-nav {
-  display: flex;
-  gap: 346px;
+.lastLi{
+  margin-right: 220px;
 }
 
 header img {
-  padding: 16px 0 16px 0;
   width: 160px;
-  height: 100px;
 }
 
-nav div {
-
-  list-style-type: none;
-  padding: 34px 0 34px 0;
-  border: none;
-  border-radius: 5px;
-}
-
+/* BUTTON */
 nav .btn {
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
   height: 44px;
-  width: 164px;
+  padding: 0 20px;
   background-color: #469165;
-  border-radius: 4px;
+  color: white;
   border: none;
-
-}
-
-nav .btn:hover {
-  box-shadow: 0 0 5px 3px rgb(177, 174, 174);
+  border-radius: 4px;
+  font-weight: 600;
   cursor: pointer;
 }
 
+/* ---------- HERO ---------- */
 main {
   background-image: url("assets/hero-bg.png");
-  height: 674px;
-  width: 1600;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  gap: 20px;
+  text-align: center;
+  padding: 0 20px;
 }
 
 main .c-1 {
   border-radius: 1000px;
   font-size: 16px;
-  font-weight: 500px;
-  width: 229px;
-  height: 35px;
+  padding: 8px 16px;
   color: #469165;
 }
 
-.c-1:hover {
-  box-shadow: 0 0 5px 3px rgb(177, 174, 174);
-  cursor: pointer;
-}
-
+main .span-1,
 main .span-2 {
-  color: #30B868;
-  font-size: 65px;
-
+  font-size: clamp(32px, 5vw, 64px);
 }
 
 main .span-1 {
   color: white;
-  font-size: 65px;
+}
 
+main .span-2 {
+  color: #30B868;
 }
 
 main p {
-  font-size: 18px;
   color: white;
+  max-width: 700px;
+}
+
+/* HERO BUTTONS */
+.btn-parent {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+main .btn-1,
+main .btn-2 {
+  height: 52px;
+  width: 250px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 main .btn-1 {
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  height: 52px;
-  width: 251px;
   background-color: #469165;
-  border-radius: 4px;
   border: none;
-}
-
-.btn-1:hover {
-  box-shadow: 0 0 5px 3px rgb(177, 174, 174);
-  cursor: pointer;
+  color: white;
 }
 
 main .btn-2 {
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-  height: 52px;
-  width: 251px;
-  background-color: transparent;
-  border-radius: 4px;
-  margin-left: 16px;
+  background: transparent;
   border: 1px solid white;
+  color: white;
 }
 
-.btn-2:hover {
-  box-shadow: 0 0 5px 3px rgb(177, 174, 174);
-  cursor: pointer;
-}
-
-.btn-parent {
-  margin-top: 32px;
-
-}
-
+/* ---------- NOTES ---------- */
 .notes {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   text-align: center;
-  margin-top: 30px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 .notes h2 {
-  font-size: 48px;
-  font-weight: bold;
+  font-size: clamp(28px, 4vw, 48px);
 }
 
 .notes p {
   margin-top: 16px;
-  font-size: 16px;
-  font-weight: 400;
   color: #627382;
 }
 
-.subsec {
-  background-color: red;
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.subsec img {
-  height: 32px;
-  width: 32px;
-  /* padding: 6px; */
-
+/* ---------- FEATURES ---------- */
+.main-sec {
+  max-width: 1600px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  text-align: center;
 }
 
 .sec {
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.subsec {
+  background-color: #F95555;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  margin: auto;
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  gap: 15px;
-  border-radius: 8px;
-  /* border: 1px solid red; */
-  width: 322px;
-  height: 300px;
-  box-shadow: 1px 1px 50px 15px rgb(241, 238, 238);
-
 }
 
 .sec h3 {
-  color: black;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 22px;
 }
 
 .sec p {
   color: #627382;
-  font-size: 18px;
-  font-weight: 400;
 }
 
-.main-sec {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 24px;
-  margin-top: 44px;
-}
-
+/* ---------- BRAIN SECTION ---------- */
 .brain {
-  display: flex;
-  margin-top: 120px;
-  width: 1360px;
-  height: 600px;
-  margin-left: 120px;
-
+  max-width: 1600px;
+  margin: 100px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .brain .bro {
-  /* margin-left: 60px; */
   display: flex;
-  padding: 102px 0 102px 60px;
-  justify-content: center;
   flex-direction: column;
   gap: 20px;
+}
 
+.brain h1 {
+  font-size: clamp(28px, 4vw, 48px);
+}
 
+.brain p {
+  color: #627382;
 }
 
 .brain ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.brain p {
-  color: #627382;
-  font-size: 16px;
-  font-weight: 400px;
-
-}
-
-.brain h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-.brain h6 {
-  color: #469165;
-  font-size: 14px;
-  font-weight: 300px;
-}
-
-.brain ul img {
-  height: 14px;
-  width: 14px;
-}
 
 .bg {
+  width: 960px;
+  height: 300px;
+  margin: auto;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #F7F6F2;
-  width: 1300px;
-  height: 384px;
   gap: 20px;
+  background-color: #F7F6F2;
+  padding: 50px 40px;
 }
 
-.marks {
+.marks{
+  width: 1260px;
+  height: 384px;
   display: flex;
   justify-content: center;
-  margin: 120px;
-}
+  align-items: center;
 
-.bg p {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  color: #627382;
 }
 
 .bg h2 {
-  font-size: 40px;
-  font-weight: bold;
-
-
+  font-size: clamp(28px, 4vw, 40px);
 }
 
-.bg h6 {
-  font-size: 16px;
-  font-weight: 300;
+.bg p {
   color: #627382;
 }
 
 .bg button {
-  border: none;
-  border-radius: 4px;
+  width: 200px;
+  height: 52px;
+  margin: auto;
   background-color: #469165;
   color: white;
-  width: 194px;
-  height: 52px;
-
-}
-
-.bg button:hover {
-  box-shadow: 0 0 5px 3px rgb(177, 174, 174);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
+/* ---------- FOOTER ---------- */
 .footer {
   background-color: #001931;
-  width: 1580;
-  height: 348px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1100px;
+  padding: 60px 20px;
+}
 
+.footer > div {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
 
 .foot {
-  color: white;
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 
 .foot i {
   background-color: white;
-  border-radius: 50%;
   color: black;
-  height: 22px;
-  width: 22px;
-  padding: 4px;
+  border-radius: 50%;
+  padding: 6px;
+  margin-right: 6px;
 }
 
+/* ---------- COPYRIGHT ---------- */
 footer {
   background-color: #001931;
-  display: flex;
-  justify-content: center;
 }
 
 footer div {
-
-  width: 1100px;
-  height: 65px;
-  border-top: 1px solid #8e8d8d4a;
-  color: #FAFAFA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-bottom: 30px; */
-
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  text-align: center;
 }
 
-footer h6 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #FAFAFA;
+/* ---------- MOBILE FIX ---------- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .brain {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer > div {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
